@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 Google SEO sitemap
-Sitemap: https://www.google.com/search?q=https://www.agenciavetordigital.com.br/sitemap.xml
+Sitemap: https://www.agenciavetordigital.com.br/sitemap.xml
