@@ -1,0 +1,6 @@
+Allow all web crawlers to access all content
+User-agent: *
+Allow: /
+
+Google SEO sitemap
+Sitemap: https://www.google.com/url?sa=E&source=gmail&q=https://www.agenciavetordigital.com.br/sitemap.xml
