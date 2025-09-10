@@ -10,22 +10,26 @@
     <meta name="keywords" content="social media, marketing digital, instagram, gestão de redes sociais, IA, inteligência artificial, agência de marketing, Paraná, criação de conteúdo">
     <meta name="author" content="Agência Vetor Digital">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.agenciavetordigital.com.br"> <!-- Exemplo de URL canônica -->
+    <link rel="canonical" href="https://www.agenciavetordigital.com.br">
 
     <!-- Open Graph Meta Tags (para compartilhamento em redes sociais) -->
     <meta property="og:title" content="Agência Vetor Digital | Social Media com IA">
     <meta property="og:description" content="Transformamos sua presença no Instagram com conteúdo criativo gerado por IA.">
-    <meta property="og:image" content="https://placehold.co/1200x630/1A237E/FFFFFF?text=Vetor+Digital"> <!-- Imagem para compartilhamento -->
-    <meta property="og:url" content="https://www.agenciavetordigital.com.br"> <!-- Exemplo de URL -->
+    <meta property="og:image" content="https://www.agenciavetordigital.com.br/og-image.png"> <!-- Lembre-se de criar e subir essa imagem -->
+    <meta property="og:url" content="https://www.agenciavetordigital.com.br">
     <meta property="og:type" content="website">
 
     <!-- Favicon -->
     <link rel="icon" href="vetor-digital-svg.svg" type="image/svg+xml">
 
-    <!-- Google Fonts: Montserrat -->
+    <!-- Otimização de Carregamento de Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap">
+    </noscript>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -39,7 +43,8 @@
 
         /* Cores da marca para facilitar o uso */
         .text-vetor-dark-blue { color: #1A237E; }
-        .text-vetor-light-blue { color: #64B5F6; }
+        /* COR AJUSTADA PARA ACESSIBILIDADE (melhor contraste) */
+        .text-vetor-light-blue { color: #1D4ED8; } 
         .bg-vetor-dark-blue { background-color: #1A237E; }
         .bg-vetor-mid-blue { background-color: #2196F3; }
         .border-vetor-dark-blue { border-color: #1A237E; }
@@ -72,12 +77,7 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <!-- Logo -->
             <a href="#" class="flex items-center space-x-2">
-                <!-- 
-                ================================================
-                CÓDIGO DO LOGO ALTERADO PARA USAR O ARQUIVO SVG
-                ================================================
-                -->
-                <img src="vetor-digital-svg.svg" alt="Logo Agência Vetor Digital" class="h-16 w-auto">
+                <img src="logo_seta.png" alt="Logo Agência Vetor Digital" class="h-16 w-auto">
                 <div>
                     <span class="text-xl font-semibold text-vetor-dark-blue tracking-tight">AGÊNCIA VETOR</span>
                     <span class="block text-sm font-regular text-vetor-light-blue -mt-1 tracking-widest">DIGITAL</span>
@@ -94,7 +94,7 @@
                 Fale Conosco
             </a>
             <!-- Menu Hamburguer Mobile -->
-            <button id="mobile-menu-button" class="md:hidden text-vetor-dark-blue">
+            <button id="mobile-menu-button" class="md:hidden text-vetor-dark-blue" aria-label="Abrir menu de navegação" aria-controls="mobile-menu" aria-expanded="false">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
@@ -168,7 +168,21 @@
             <div class="container mx-auto px-6">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="reveal">
-                        <img src="agencia vetor digital.png" alt="Equipe da Agência Vetor Digital trabalhando" class="rounded-xl shadow-2xl w-full">
+                        <!--
+                            MELHORIA DE PERFORMANCE:
+                            A imagem original 'agencia vetor digital.png' é muito grande.
+                            É ESSENCIAL redimensioná-la para ~500x500 pixels e salvá-la como WebP para otimização máxima.
+                            Os atributos loading="lazy", decoding="async", width e height foram adicionados abaixo.
+                        -->
+                        <img 
+                            src="agencia vetor digital redimensionada.png" 
+                            alt="Equipe da Agência Vetor Digital trabalhando" 
+                            class="rounded-xl shadow-2xl w-full"
+                            loading="lazy"
+                            decoding="async"
+                            width="524"
+                            height="524"
+                        >
                     </div>
                     <div class="reveal">
                         <h2 class="text-3xl md:text-4xl font-bold text-vetor-dark-blue mb-4">Somos a Vetor Digital</h2>
@@ -236,12 +250,7 @@
             <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
                 <div class="mb-6 md:mb-0">
                     <a href="#" class="flex items-center justify-center md:justify-start space-x-2">
-                        <!-- 
-                        ================================================
-                        CÓDIGO DO LOGO ALTERADO PARA USAR O ARQUIVO SVG
-                        ================================================
-                        -->
-                         <img src="vetor-digital-svg.svg" alt="Logo Agência Vetor Digital" class="h-14 w-auto">
+                        <img src="logo_seta.png" alt="Logo Agência Vetor Digital" class="h-14 w-auto">
                         <div>
                             <span class="text-xl font-semibold tracking-tight">AGÊNCIA VETOR</span>
                             <span class="block text-sm font-regular text-gray-400 -mt-1 tracking-widest">DIGITAL</span>
@@ -262,13 +271,16 @@
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenuButton.addEventListener('click', () => {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
                 mobileMenu.classList.toggle('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
             });
 
             // Fechar menu mobile ao clicar em um link
             document.querySelectorAll('#mobile-menu a').forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
                 });
             });
 
@@ -345,27 +357,4 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
